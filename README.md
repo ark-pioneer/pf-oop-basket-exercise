@@ -16,7 +16,7 @@ For each task:
 - FIRST: write the interaction in the main.py file that you're trying to complete (see the current `main.py` for an example interaction)
 - THEN: and then add code to the class definition in `basket.py` so that when you run the main file, it outputs as expected.
 
-#### Task 1
+#### TASK 1
 ```
 Basket#remove
 - if the item by name exists and there are at least as many items by that name in the basket, remove them from the list of items.
@@ -86,14 +86,17 @@ for example:
 GIVEN: 
 - a basket of capacity 5
     basket = Basket(5)
-- add two items
+- add three items
+    basket.add({"name": "bread", "cost": 5})
     basket.add({"name": "bread", "cost": 5})
     basket.add({"name": "water", "cost": 3})
 WHEN:
 - calling basket show method
-    basket.show()
+    basket.summary()
 THEN:
-- each item and its cost should be printed
-    bread  5
-    water  3
+- each basket should print a summary of the items in the basket
+    bread  x2  10
+    water  x1  3
+    -------------
+    total:     13
 ```
